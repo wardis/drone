@@ -6,8 +6,8 @@ body {
   height: 100vh;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-
   font-size: 18px;
+  color: #1a1c20;
 }
 
 .container {
@@ -30,7 +30,17 @@ body {
 
 .right {
   left: 50%;
-  background: #222;
+  background: #000000; /* fallback for old browsers */
+  background: -webkit-radial-gradient(
+    circle at left,
+    #1a1c20,
+    #000000
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: radial-gradient(
+    circle at left,
+    #1a1c20,
+    #000000
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .nav {
@@ -46,7 +56,9 @@ body {
   width: 45px;
   height: 26px;
   background-size: cover;
-  margin: 10px;
+  top: 40px;
+  left: 80px;
+  position: relative;
 }
 
 .next {
@@ -91,9 +103,61 @@ body {
   }
 }
 
+.left-bottom {
+  position: absolute;
+  bottom: 40px;
+  left: 80px;
+  text-transform: uppercase;
+  font-size: 0.7em;
+  letter-spacing: 0.3em;
+}
 
-.left-bottom,
-.left-sidebar,
+.left-sidebar {
+  position: absolute;
+  left: 80px;
+  top: 35%;
+  transform: translateY(-50%);
+  width: 24%;
+}
+
+.left-sidebar .product-title {
+  font-size: 2.7em;
+}
+
+.left-sidebar button {
+  border: none;
+  outline: none;
+  padding: 19px 45px;
+  background: #1a1c20;
+  color: #fff;
+  margin: 1em 0;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 18px;
+  letter-spacing: 4px;
+}
+
+.left-sidebar button ion-icon {
+  margin-bottom: -3px;
+}
+
 .media {
-  display: none;
+  position: absolute;
+  bottom: 40px;
+  right: 80px;
+  color: #fff;
+}
+
+.media ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.media ul li {
+  display: inline-block;
+}
+
+.media ul li:not(:last-child) {
+  padding-right: 40px;
 }
