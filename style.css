@@ -29,6 +29,7 @@ body {
 }
 
 .right {
+  z-index: -3;
   left: 50%;
   background: #000000; /* fallback for old browsers */
   background: -webkit-radial-gradient(
@@ -88,18 +89,19 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  animation: fly 4s ease-in-out infinite;
+  opacity: 0;
+  z-index: -2;
 }
 
 @keyframes fly {
-  0% {
-    transform: translate(-50%, -46%);
+  from {
+    transform: translate(-50%, -50%);
   }
   50% {
-    transform: translate(-50%, -54%);
+    transform: translate(-49%, -49%);
   }
-  100% {
-    transform: translate(-50%, -46%);
+  to {
+    transform: translate(-50%, -50%);
   }
 }
 
