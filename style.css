@@ -70,10 +70,30 @@ body {
   padding-bottom: 12px;
 }
 
+.product img {
+  position: absolute;
+  width: 35%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: fly 4s ease-in-out infinite;
+}
+
+@keyframes fly {
+  0% {
+    transform: translate(-50%, -46%);
+  }
+  50% {
+    transform: translate(-50%, -54%);
+  }
+  100% {
+    transform: translate(-50%, -46%);
+  }
+}
+
 
 .left-bottom,
 .left-sidebar,
-.media,
-.product {
+.media {
   display: none;
 }
